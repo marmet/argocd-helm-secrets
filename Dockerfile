@@ -1,9 +1,9 @@
-ARG ARGOCD_VERSION="v2.4.11"
+ARG ARGOCD_VERSION="v2.4.14"
 FROM argoproj/argocd:$ARGOCD_VERSION
 ARG SOPS_VERSION="3.7.3"
 ARG VALS_VERSION="0.18.0"
-ARG HELM_SECRETS_VERSION="4.0.0"
-ARG KUBECTL_VERSION="1.24.3"
+ARG HELM_SECRETS_VERSION="4.1.1"
+ARG KUBECTL_VERSION="1.24.6"
 # In case wrapper scripts are used, HELM_SECRETS_HELM_PATH needs to be the path of the real helm binary
 ENV HELM_SECRETS_HELM_PATH=/usr/local/bin/helm \
     HELM_PLUGINS="/home/argocd/.local/share/helm/plugins/" \
