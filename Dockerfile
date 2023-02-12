@@ -33,6 +33,6 @@ RUN curl -fsSL https://github.com/variantdev/vals/releases/download/v${VALS_VERS
     | tar xzf - -C /usr/local/bin/ vals \
     && chmod +x /usr/local/bin/vals
 
-USER argocd
+USER $ARGOCD_USER_ID
 
 RUN helm plugin install --version ${HELM_SECRETS_VERSION} https://github.com/jkroepke/helm-secrets
